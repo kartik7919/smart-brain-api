@@ -33,8 +33,8 @@ app.get('/profile/:id',(req,res)=>{Profile.ProfileHandle(req,res,knex,db)})
 app.put('/image',(req,res)=>{Image.ImageHandle(req,res,db,knex)})
 app.post('/imageurl',(req,res)=>{Image.Imageurl(req,res)})
 	 		
-app.listen(3000, ()=>{
-	console.log('server is working at port 3000')
+app.listen(process.env.PORT || 3000, ()=>{
+	console.log(`server is working at port ${PORT}`)
 })
 
 
