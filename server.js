@@ -24,7 +24,7 @@ app.use(bodyparser.json())
 app.use(cors())
 
 app.get('/', (req,res)=>{
-	res.json(database.users)
+	res.json('its working!!')
 })
 
 app.post('/signin',(req,res)=>{Signin.SigninHandle(req,res,db,knex,bcrypt)})
